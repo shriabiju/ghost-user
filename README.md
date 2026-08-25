@@ -3,7 +3,9 @@
 A synthetic user simulator for testing web apps. AI agents, each roleplaying a different kind of user, browse your app, take real actions in a real browser, hit friction, and report what went wrong — before real users do.
 
 **Live app:** https://ghost-user-frontend.shriabiju.workers.dev
+
 **Demo app under test:** https://ghost-user-demo-shop.shriabiju.workers.dev
+
 **API:** https://ghost-user.onrender.com
 
 *The backend is on a free tier and sleeps after ~15 minutes of inactivity — the first request after a while can take 30-60s.*
@@ -12,11 +14,11 @@ A synthetic user simulator for testing web apps. AI agents, each roleplaying a d
 
 ## What it does
 
-Pick a persona — Impatient User, Confused First-Timer, Skeptical Shopper, Low-Vision User, and 19 others across 5 categories — and give it a goal, like "buy the headphones and complete checkout."
-
-An agent loop launches a real headless browser pointed at your app and repeats a simple cycle: observe the page, decide the next action in character for that persona, execute it. Every step is logged with the model's reasoning and a screenshot. Once the run ends, a second pass reads the full trace and writes a plain-English finding — goal completed, abandoned, or blocked — with specific issues called out.
-
-The frontend shows a step-by-step replay next to that report.
+- Pick a **persona** — Impatient User, Confused First-Timer, Skeptical Shopper, Low-Vision User, and 19 others across 5 categories — and give it a goal, like "buy the headphones and complete checkout."
+- An agent loop launches a real headless browser pointed at your app and repeats a simple cycle: **observe** the page, **decide** the next action in character for that persona, **execute** it.
+- Every step is logged with the model's reasoning and a screenshot.
+- Once the run ends, a second pass reads the full trace and writes a plain-English finding — goal completed, abandoned, or blocked — with specific issues called out.
+- The frontend shows a step-by-step replay next to that report.
 
 Unlike scripted QA, there's no predefined path. The agent reasons over real page state each step, and different personas don't just move at different speeds — they notice different things. A screen-reader-style persona and an impatient one can look at the same page and flag entirely different problems.
 
@@ -48,11 +50,11 @@ Unlike scripted QA, there's no predefined path. The agent reasons over real page
 
 ## Stack
 
-Frontend — React, Vite, Tailwind, Framer Motion. Deployed on Cloudflare Workers.
-Backend — FastAPI, deployed on Render as a Docker image built on Microsoft's official Playwright base.
-Database — PostgreSQL on Neon, via SQLAlchemy.
-Browser automation — Playwright (Chromium).
-LLM — Groq (`openai/gpt-oss-120b`), tool-calling for a constrained action schema: click, type, scroll, wait, report_issue, done.
+- **Frontend** — React, Vite, Tailwind, Framer Motion. Deployed on Cloudflare Workers.
+- **Backend** — FastAPI, deployed on Render as a Docker image built on Microsoft's official Playwright base.
+- **Database** — PostgreSQL on Neon, via SQLAlchemy.
+- **Browser automation** — Playwright (Chromium).
+- **LLM** — Groq (`openai/gpt-oss-120b`), tool-calling for a constrained action schema: click, type, scroll, wait, report_issue, done.
 
 ## Structure
 
