@@ -77,7 +77,7 @@ export default function Findings() {
             <div className="aspect-video bg-ink-900 flex items-center justify-center border-b sm:border-b-0 sm:border-r border-ink-700">
               {step?.screenshot_path ? (
                 <img
-                  src={`http://localhost:8000/${step.screenshot_path}`}
+                  src={`${import.meta.env.VITE_API_URL || "http://localhost:8000"}/${step.screenshot_path}`}
                   alt={`Step ${step.step_number} screenshot`}
                   className="h-full w-full object-contain"
                 />

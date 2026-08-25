@@ -65,7 +65,7 @@ export default function LiveRun() {
           <div className="aspect-video bg-ink-900 flex items-center justify-center">
             {latestScreenshot ? (
               <img
-                src={`http://localhost:8000/${latestScreenshot}`}
+                src={`${import.meta.env.VITE_API_URL || "http://localhost:8000"}/${latestScreenshot}`}
                 alt="Latest screenshot of the app under test"
                 className="h-full w-full object-contain"
               />
