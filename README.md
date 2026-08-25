@@ -38,21 +38,27 @@ and flag completely different problems.
 ## Screenshots
 
 **Dashboard** — past runs at a glance, with status and a "Run a test" entry point.
+
 ![Dashboard](screenshots/dashboard.png)
 
 **Persona category picker** — 23 personas grouped into 5 categories, kept behind a dropdown so nothing's cluttered by default.
+
 ![Persona category picker](screenshots/persona-category.png)
 
 **Persona selection** — once a category's chosen, pick the specific persona and see its description before starting a run.
+
 ![Persona selection](screenshots/persona.png)
 
 **New run setup** — choose a persona, set the target URL and goal, then send the ghost.
+
 ![New run](screenshots/new-run.png)
 
 **Finding** — the LLM-generated, plain-English report: outcome plus specific, severity-tagged issues.
+
 ![Finding](screenshots/finding.png)
 
 **Replay** — step-by-step trace with the app's screenshot and the agent's reasoning at each step.
+
 ![Replay](screenshots/replay.png)
 
 ## Tech stack
