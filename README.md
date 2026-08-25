@@ -6,7 +6,9 @@ actions in a real browser, hit friction, and report what went wrong. Before real
 users do.
 
 🔗 **Live demo:** https://ghost-user-frontend.shriabiju.workers.dev
+</br>
 🔗 **Demo app under test:** https://ghost-user-demo-shop.shriabiju.workers.dev
+</br>
 🔗 **API:** https://ghost-user.onrender.com
 
 > Note: the deployed backend is on a free tier and sleeps after ~15 min of
