@@ -6,7 +6,7 @@ import Button from "../components/ui/Button";
 import GhostAvatar from "../components/ghost/GhostAvatar";
 import { getPersonas, startRun } from "../api/client";
 
-const DEFAULT_TARGET = "http://localhost:5174";
+const DEFAULT_TARGET = "https://ghost-user-demo-shop.shriabiju.workers.dev";
 const DEFAULT_GOAL = "Buy the headphones and complete checkout";
 
 const selectClass =
